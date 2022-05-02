@@ -14,6 +14,7 @@ function App() {
           return {...stk, bought: false}
         })
         setStocks(newData)
+
       })
   }, []);
 
