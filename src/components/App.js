@@ -14,12 +14,18 @@ function App() {
           return {...stk, bought: false}
         })
         setStocks(newData)
+
       })
   }, []);
 
    
-  function handleAddToPortfolio(stockToAdd) {
+  function handleAdd(stockToAdd) {
     setPortfolio([...portfolio, stockToAdd]);
+  }
+
+  function handleSellStock(){
+    console.log('Hello')
+
   }
 
   return (
@@ -28,8 +34,9 @@ function App() {
       <MainContainer
         stocks={stocks}
         setStocks={setStocks}
-        handleAddToPortfolio={handleAddToPortfolio}
+        handleAdd={handleAdd}
         portfolio={portfolio}
+        handleSellStock={handleSellStock}
       />
     </div>
   );
