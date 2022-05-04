@@ -1,14 +1,12 @@
 import React from "react";
 import Stock from "./Stock";
 
-function StockContainer({ stocks, setStocks, handleAdd }) {
-  
-
+function StockContainer({ stocksToDisplay, handleAdd, }) {
   return (
     <div>
       <h2>Stocks</h2>
-      {stocks.map((stock) => (
-        <Stock stock={stock} key={stock.id} handleAdd={handleAdd} />
+      {stocksToDisplay.map((stock) => (
+        <Stock stock={stock} key={stock.id} onStockClick={handleAdd} />
       ))}
     </div>
   );
